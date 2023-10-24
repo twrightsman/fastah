@@ -1,0 +1,16 @@
+[project]
+name = "fastah"
+dynamic = ["version"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "fastah.__version__"}
+
+[project.scripts]
+fastah = "fastah.cli:main"
+
+[project.optional-dependencies]
+zstd = ["zstandard"]
